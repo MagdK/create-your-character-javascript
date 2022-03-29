@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+}
+a {
+  text-decoration: none;
+}
+a img {
+  border: none;
+}
+  
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+  
+textarea {
+  resize: none;
+}
+  
+button,
+textarea,
+select {
+  appearance: none !important;
+  border-radius: 0;
+}
+
+/* End of reset */
+
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+}
+
+body {
+	/* font-family: 'Share Tech Mono', monospace; */
+	font-family: 'Press Start 2P';
+}
+
+h1 {
+	width: 100%;
+	color: black;
+	font-size: 40px;
+	line-height: 60px;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+h2 {
+	font-size: 30px;
+	color: black;
+	font-size: 30px;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+form {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+
+label {
+	font-size: 16px;
+	line-height: 26px;
+	text-transform: lowercase;
+}
+
+select {
+	background-image: 
+	url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ic_arrow_drop_down_36px.svg/1920px-Ic_arrow_drop_down_36px.svg.png?20141023105518");
+	background-position: right 10px center;
+	background-repeat: no-repeat;
+	background-size: auto 70%;
+	text-transform: lowercase;
+}
+
+input, 
+label,
+select {
+	display: block;
+	width: 100%;
+}
+
+input,
+select {
+	height: 60px;
+	padding: 0 10px;
+	margin-bottom: 20px;
+	font-size: 24px;
+	background-color: white;
+  	border: solid 3px rgb(38, 38, 38);
+}
+
+/* Above 989px */
+@media screen and (min-width: 990px) {
+	#root {
+		height: 100vh;
+	} 
+
+  #character-creation {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 40px;
+		height: 60vh;
+		margin: 0 auto;
+  } 
+
+	.edit-block,
+	.preview-block {
+		width: 40%;
+	}
+}
+
+
+/* Below 990px */
+@media screen and (max-width: 989px) {
+  #root {
+		margin-top: 40px;
+	}
+	
+	#character-creation {
+		display: flex;
+		flex-flow: column;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+		margin: 0 auto;
+  }
+
+	.edit-block,
+	.preview-block {
+		width: 80%;
+		height: 60%;
+	}
+
+	.edit-block {
+		order: 3;
+	}
+	
+}
+
+/* Preview block - right side */
+.preview-block {
+	text-align: center;
+}
+
+.preview-block img {
+	width: 50%;
+	padding-top: 26px;
+}
