@@ -65,17 +65,61 @@ function loadEvent() {
     raceSelect.addEventListener('change', updateImage);
     classSelect.addEventListener('change', updateImage);
  
-    function updateImage(e) {
+    function updateImage() {
+        // CLEAN SOLUTION
         // const values = [raceSelect.value, genderSelect.value, classSelect.value];
         // const imagePath = "assets/" + values.join("-") + ".svg";
         // image.src = imagePath
         
-        if(genderSelect.value === 'G-Default' && raceSelect === 'R-Default' && classSelect === 'C-Default') {
+        // MESSY, IF-ELSE SOLUTION
+        if(genderSelect.value === 'G-Default' && raceSelect.value === 'R-Default' && classSelect.value === 'C-Default') {
             image.src = "assets/R-Default-G-Default-C-Default.svg"
-        } else if(genderSelect.value === 'G-Boy' && raceSelect === 'R-Default' && classSelect === 'C-Default') {
-            image.src = 'assets/R-Default-G-Boy-C-Default.svg'
-        } else if(genderSelect.value === 'G-Boy' && raceSelect === 'R-Zombie' && classSelect === 'C-Default') {
-            image.src = 'assets/R-Default-G-Boy-C-Default.svg'
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Default' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Default-G-Boy-C-Default.svg"
+        } else if(genderSelect.value === 'G-Girl' && raceSelect.value === 'R-Default' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Default-G-Girl-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Prefer-not-to-say' && raceSelect.value === 'R-Default' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Default-G-Prefer-not-to-say-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Default' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Default-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Default' && raceSelect.value === 'R-Gold' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Gold-G-Default-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
+            console.log(image.src)
+        } else if(genderSelect.value === 'G-Boy' && raceSelect.value === 'R-Zombie' && classSelect.value === 'C-Default') {
+            image.src = "assets/R-Zombie-G-Boy-C-Default.svg"
             console.log(image.src)
         }
     }
