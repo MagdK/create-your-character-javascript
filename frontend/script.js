@@ -45,7 +45,7 @@ function loadEvent() {
 
     rootElement.insertAdjacentHTML("beforeend", characterEditBlocks());
 
-            // NAME INPUT
+   // NAME INPUT
     const input = document.querySelector('input');
     const log = document.getElementById('name-value');
 
@@ -53,9 +53,9 @@ function loadEvent() {
 
     function updateValue(e) {
       log.textContent = e.target.value;
-    }
-
-            // SELECT
+    };
+    
+    // SELECT
     const genderSelect = document.getElementById('gender');
     const raceSelect = document.getElementById('race');
     const classSelect = document.getElementById('class');
@@ -66,11 +66,19 @@ function loadEvent() {
     classSelect.addEventListener('change', updateImage);
  
     function updateImage(e) {
-       const values = [raceSelect.value, genderSelect.value, classSelect.value];
-       const imagePath = "assets/" + values.join("-") + ".svg";
-
-       image.src = imagePath
+        // const values = [raceSelect.value, genderSelect.value, classSelect.value];
+        // const imagePath = "assets/" + values.join("-") + ".svg";
+        // image.src = imagePath
+        
+        if(genderSelect.value === 'G-Default' && raceSelect === 'R-Default' && classSelect === 'C-Default') {
+            image.src = "assets/R-Default-G-Default-C-Default.svg"
+        } else if(genderSelect.value === 'G-Boy' && raceSelect === 'R-Default' && classSelect === 'C-Default') {
+            image.src = 'assets/R-Default-G-Boy-C-Default.svg'
+        } else if(genderSelect.value === 'G-Boy' && raceSelect === 'R-Zombie' && classSelect === 'C-Default') {
+            image.src = 'assets/R-Default-G-Boy-C-Default.svg'
+            console.log(image.src)
+        }
     }
-}
+};
 window.addEventListener("load", loadEvent);
 
