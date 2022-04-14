@@ -2,8 +2,8 @@
 
 let characterEditBlocks = function() {
     return `
-    <h1 id="page-title">Create Your Character</h1>
-    <section id="character-creation">
+    <h1 id="page-title" class="animate-bottom">Create Your Character</h1>
+    <section id="character-creation" >
         <article class="edit-block">
             <form>
                 <label for="name">name</label>
@@ -39,9 +39,12 @@ let characterEditBlocks = function() {
 };
 
 
+
 function loadEvent() {
     let rootElement = document.getElementById("root");
     // console.log(rootElement);
+
+    let loaderAnimation = document.getElementById("loader");
 
     rootElement.insertAdjacentHTML("beforeend", characterEditBlocks());
 
@@ -123,6 +126,18 @@ function loadEvent() {
             console.log(image.src)
         }
     }
+
+     // LOADING ANIMATION
+     let myVar;
+
+     function myFunction() {
+         myVar = setTimeout(showPage, 3000);
+     }
+ 
+     function showPage() {
+         document.getElementById("loader").style.display = "none";
+         document.getElementById("root").style.display = "block";
+     }
 };
 window.addEventListener("load", loadEvent);
 
