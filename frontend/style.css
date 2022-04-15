@@ -108,7 +108,7 @@ select {
 		height: 100vh;
 	} 
 
-  #character-creation {
+	#character-creation {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
@@ -117,7 +117,7 @@ select {
 		gap: 40px;
 		height: 60vh;
 		margin: 0 auto;
-  } 
+	} 
 
 	.edit-block,
 	.preview-block {
@@ -209,9 +209,4 @@ select {
 @keyframes animatebottom { 
 	from{ bottom:-100px; opacity:0 } 
 	to{ bottom:0; opacity:1 }
-}
-  
-#root {
-	display: none;
-	text-align: center;
 }
