@@ -12,6 +12,6 @@ const myLogger = function (req, res, next) {
 app.use(myLogger)
 
 // statikus fajlok kiszolgalasa
-app.use(express.static('../frontend'));
+app.use(express.static('public'));
 
 app.listen(3000);
